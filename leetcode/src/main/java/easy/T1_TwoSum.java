@@ -35,7 +35,7 @@ public class T1_TwoSum {
     }
 
     private static int[] twoSum(int[] arr, int target) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>(arr.length);
         for (int i = 0; i < arr.length; i++) {
             map.put(arr[i], i);
         }
@@ -49,7 +49,7 @@ public class T1_TwoSum {
     }
 
     private static int[] twoSum2(int[] arr, int target) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>(arr.length);
         for (int i = 0; i < arr.length; i++) {
             int value = target - arr[i];
             if (map.containsKey(value) && map.get(value) != i) {
